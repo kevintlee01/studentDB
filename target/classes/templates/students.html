@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Student Input Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Input Student</h1>
+<form action="/students" modelAttribute="student" method="post">
+    <table style="width:100%">
+        <tr>
+            <td>First name:</td>
+            <td><input type="text" name="firstname"/></td>
+        </tr>
+        <tr>
+            <td>Last name:</td>
+            <td><input type="text" name="lastname"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td><input type="date" name="dob"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create Student"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="reset" value="Clear Fields"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

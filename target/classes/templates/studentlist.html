@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Student Display Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Students</h1>
+<table style="width:100%">
+    <tr>
+        <th style="text-align:center">ID</th>
+        <th style="text-align:center">Name</th>
+        <th style="text-align:center">Email</th>
+        <th style="text-align:center">Date of Birth</th>
+        <th></th>
+    </tr>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}" style="text-align:center"></td>
+        <td th:text="${student.firstname + ' ' + student.lastname}" style="text-align:center"></td>
+        <td th:text="${student.email}" style="text-align:center"></td>
+        <td th:text="${student.dob}" style="text-align:center"></td>
+    </tr>
+</table>
+<a href="/students">Add Another Student</a>
+</body>
+</html>
